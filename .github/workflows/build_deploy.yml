@@ -1,0 +1,157 @@
+name: Build, Test and Deploy
+
+on:
+  push:
+    branches: master
+
+  workflow_dispatch:
+  repository_dispatch:
+
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GTOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.7'
+          architecture: 'x64'
+
+
+      - name: Install the library
+        run: |
+          pip install nbdev
+
+
+      - name: Check that all notebooks are readable
+        run: |
+          nbdev_read_nbs
+
+
+      - name: Check if all notebooks are cleaned and in sync
+        run: |
+          nbdev_clean_nbs
+          nbdev_diff_nbs
+          if [ -n "$(git status -uno -s)" ]; then echo -e "Notebooks are not clean"; false; fi
+          if [ -n "$(nbdev_diff_nbs)" ]; then echo -e "Notebooks are not clean"; false; fi
+     
+
+      - name: Fix Clean
+        if: failure()
+        run: |
+          nbdev_build_lib
+          git config --global user.name 'ELC'
+          git config --global user.email 'elcg@gmx.com'
+          git add -A
+          git commit --amend -m "${{ github.event.head_commit.message }} - Cleaned and in Sync"
+          git push --force
+
+
+
+
+  test:
+    needs: build
+    strategy:
+      matrix:
+        os:  [ubuntu, macos]
+        python-version: ['3.7', '3.8', '3.9']
+    runs-on: ${{ matrix.os }}-latest
+    name: ${{ matrix.os }} - Python ${{ matrix.python-version }} - Test
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+          architecture: x64
+
+      - name: Install
+        run: |
+          pip install nbdev
+          pip install -e .
+
+      - name: Check that all notebooks are readable
+        run: nbdev_read_nbs
+
+      - name: Check if all notebooks are in sync
+        run: |
+          nbdev_diff_nbs
+          if [ -n "$(nbdev_diff_nbs)" ]; then echo -e "Notebooks are not clean"; false; fi
+
+      - name: Run Tests
+        run: nbdev_test_nbs
+
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    name: Deploy Docs
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GTOKEN }}
+
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.7'
+          architecture: 'x64'
+
+
+      - name: Build Wheel
+        run: |
+          pip install nbdev wheel
+          python setup.py sdist bdist_wheel
+
+
+      - name: Publish a Python distribution to PyPI
+        uses: pypa/gh-action-pypi-publish@v1.4.1
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
+
+
+      - name: Generate Docs
+        run: |
+          nbdev_build_docs
+
+
+      - name: Deploy Docs
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_branch: docs
+          publish_dir: docs
+          full_commit_message: ${{ github.event.head_commit.message }}
+          github_token: ${{ secrets.GTOKEN }}
+          enable_jekyll: true
+          allow_empty_commit: true
+
+
+      - name: Increase Version Number
+        if: failure()
+        run: |
+          nbdev_bump_version
+      
+
+      - name: Fix Clean
+        if: failure()
+        run: |
+          nbdev_build_lib
+          git config --global user.name 'ELC'
+          git config --global user.email 'elcg@gmx.com'
+          git add -A
+          git commit --amend -m "${{ github.event.head_commit.message }} - Cleaned and in Sync"
+          git push --force
