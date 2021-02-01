@@ -1,0 +1,10 @@
+topnav:
+- title: Topnav
+  items:
+    - title: <i class="fa fa-github"></i> Github
+      external_url: https://github.com/ELC/nbdev_template/tree/master/
+
+#Topnav dropdowns
+topnav_dropdowns:
+- title: Topnav dropdowns
+  folders:
