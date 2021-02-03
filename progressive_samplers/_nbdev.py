@@ -8,9 +8,11 @@ index = {"grid_search": "00_core.ipynb",
          "jittered_sampling": "00_core.ipynb",
          "multi_jittered": "00_core.ipynb",
          "is_valid": "00_core.ipynb",
-         "poisson_disk": "00_core.ipynb"}
+         "poisson_disk": "00_core.ipynb",
+         "test_grid_search": "99_test.ipynb"}
 
-modules = ["core.py"]
+modules = ["core.py",
+           "test.py"]
 
 doc_url = "https://ELC.github.io/progressive_samplers/"
 

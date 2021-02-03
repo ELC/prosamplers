@@ -51,8 +51,8 @@ jobs:
           git config --global user.name 'ELC'
           git config --global user.email 'elcg@gmx.com'
           git add -A
-          git commit --amend -m "${{ github.event.head_commit.message }} - Cleaned and in Sync"
-          git push --force
+          git commit -m "${{ github.event.head_commit.message }} - Cleaned and in Sync"
+          git push
 
 
   test:
@@ -75,11 +75,14 @@ jobs:
 
       - name: Install
         run: |
-          pip install nbdev
+          pip install nbdev pytest-cov
           pip install -e .
 
       - name: Run Tests
         run: nbdev_test_nbs
+      
+      - name: Run Coverage
+        run: pytest --cov-report term-missing --cov=progressive_samplers progressive_samplers/test.py
 
   update:
     needs: test

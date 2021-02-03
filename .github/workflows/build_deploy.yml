@@ -51,8 +51,8 @@ jobs:
           git config --global user.name 'ELC'
           git config --global user.email 'elcg@gmx.com'
           git add -A
-          git commit --amend -m "${{ github.event.head_commit.message }} - Cleaned and in Sync"
-          git push --force
+          git commit -m "${{ github.event.head_commit.message }} - Cleaned and in Sync"
+          git push
 
 
 
@@ -77,7 +77,7 @@ jobs:
 
       - name: Install
         run: |
-          pip install nbdev
+          pip install nbdev pytest-cov
           pip install -e .
 
       - name: Check that all notebooks are readable
@@ -90,6 +90,9 @@ jobs:
 
       - name: Run Tests
         run: nbdev_test_nbs
+
+      - name: Run Coverage
+        run: pytest --cov-report term-missing --cov=progressive_samplers progressive_samplers/test.py
 
 
   deploy:
@@ -114,6 +117,7 @@ jobs:
       - name: Build Wheel
         run: |
           pip install nbdev wheel
+          pip install -e .
           python setup.py sdist bdist_wheel
 
 
@@ -153,5 +157,5 @@ jobs:
           git config --global user.name 'ELC'
           git config --global user.email 'elcg@gmx.com'
           git add -A
-          git commit --amend -m "${{ github.event.head_commit.message }} - Cleaned and in Sync"
-          git push --force
+          git commit -m "${{ github.event.head_commit.message }} - Cleaned and in Sync"
+          git push

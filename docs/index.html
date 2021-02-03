@@ -1,13 +1,13 @@
 ---
 
-title: Project name here
+title: Progressive Samplers
 
 
 keywords: fastai
 sidebar: home_sidebar
 
-summary: "Summary description here."
-description: "Summary description here."
+
+
 nb_path: "index.ipynb"
 ---
 <!--
@@ -31,13 +31,6 @@ nb_path: "index.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This file will become your README and also the index of your documentation.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Install">Install<a class="anchor-link" href="#Install"> </a></h2>
 </div>
 </div>
@@ -45,6 +38,16 @@ nb_path: "index.ipynb"
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><code>pip install your_project_name</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Definitions">Definitions<a class="anchor-link" href="#Definitions"> </a></h2><p>Some terminology explanations</p>
+<h3 id="What-is-a-sampler?">What is a sampler?<a class="anchor-link" href="#What-is-a-sampler?"> </a></h3><p>A sampler is a method / algorithm that generates a sequence of points in a given search space</p>
+<h3 id="What-is-progressive?">What is progressive?<a class="anchor-link" href="#What-is-progressive?"> </a></h3><p>A progressive sampler allows generating points on a point-by-point basis and does not required to say in advance how many points there need to be. They allow to ask for more points indefinetely, some only have a minimal memory footprint whereas other require complex memory mechanism</p>
+<h3 id="Why-we-need-Progressive-Samplers?">Why we need Progressive Samplers?<a class="anchor-link" href="#Why-we-need-Progressive-Samplers?"> </a></h3><p>Most use cases may be solve with a simple Grid or Random search, but when dimensionality is not huge (&lt; 100 or so dimensions) and the computation time for each point is really expensive, this alternative sampling methods could outperform naive methods as Grid or Random Search. As dimensionality increases, results tend to converge to those of Random Search</p>
 
 </div>
 </div>

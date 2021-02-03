@@ -4,6 +4,14 @@ __all__ = ['grid_search', 'random_search', 'latin_hyper_cube', 'jittered_samplin
            'poisson_disk']
 
 # Cell
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Cell
+plt.style.use("bmh")
+plt.rcParams["figure.figsize"] = (10, 10)
+
+# Cell
 def grid_search(x_range, y_range, n=10):
     visited = set()
     iteration = 0
