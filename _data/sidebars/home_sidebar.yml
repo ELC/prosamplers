@@ -11,6 +11,9 @@ entries:
       url: /
     - output: web,pdf
       title: Imports
+      url: core.html
+    - output: web,pdf
+      title: Title
       url: test.html
     output: web
     title: progressive_samplers

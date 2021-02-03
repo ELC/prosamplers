@@ -1,6 +1,7 @@
 {
   "progressive_samplers": {
     "Overview": "/",
-    "Imports": "test.html"
+    "Imports": "core.html",
+    "Title": "test.html"
   }
 }
