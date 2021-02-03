@@ -3,13 +3,15 @@
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"grid_search": "00_core.ipynb",
+         "test_grid_search_first_entries": "00_core.ipynb",
+         "test_grid_search_default_n": "00_core.ipynb",
+         "test_grid_search_default_load_test": "00_core.ipynb",
          "random_search": "00_core.ipynb",
          "latin_hyper_cube": "00_core.ipynb",
          "jittered_sampling": "00_core.ipynb",
          "multi_jittered": "00_core.ipynb",
          "is_valid": "00_core.ipynb",
-         "poisson_disk": "00_core.ipynb",
-         "test_grid_search": "99_test.ipynb"}
+         "poisson_disk": "00_core.ipynb"}
 
 modules = ["core.py",
            "test.py"]
