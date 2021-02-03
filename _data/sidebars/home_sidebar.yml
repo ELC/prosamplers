@@ -10,8 +10,8 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
-      title: module name here
-      url: core.html
+      title: Imports
+      url: test.html
     output: web
     title: progressive_samplers
   output: web
