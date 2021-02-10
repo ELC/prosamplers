@@ -1,5 +1,5 @@
 {
-  "progressive_samplers": {
+  "prosamplers": {
     "Overview": "/",
     "Imports": "core.html",
     "Title": "test.html"

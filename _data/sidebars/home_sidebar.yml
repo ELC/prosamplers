@@ -16,6 +16,6 @@ entries:
       title: Title
       url: test.html
     output: web
-    title: progressive_samplers
+    title: prosamplers
   output: web
   title: Sidebar
