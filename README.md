@@ -33,7 +33,7 @@ Most use cases may be solve with a simple Grid or Random search, but when dimens
 
 # Usage
 
-```python
+```
 1+1
 ```
 
