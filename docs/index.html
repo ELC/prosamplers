@@ -1,6 +1,6 @@
 ---
 
-title: Title
+title: Progressive Samplers
 
 
 keywords: fastai
@@ -37,27 +37,27 @@ nb_path: "index.ipynb"
 <a href="https://github.com/ELC/progressive-samplers/actions?query=workflow%3A%22Build%2C+Test+and+Deploy%22"><img src="https://img.shields.io/github/checks-status/ELC/prosamplers/master?label=Master&amp;style=for-the-badge" alt="Master"></a>
 <a href="https://github.com/ELC/prosamplers/actions?query=workflow%3A%22Build+and+Test%22"><img src="https://img.shields.io/github/checks-status/ELC/prosamplers/develop?label=develop&amp;style=for-the-badge" alt="Develop"></a>
 <a href="https://github.com/ELC/prosamplers/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=for-the-badge" alt="License"></a></p>
-<h1 id="Progressive-Samplers">Progressive Samplers<a class="anchor-link" href="#Progressive-Samplers"> </a></h1><p>Collection of progressive samplers for general use, mainly for Hyperparameter search</p>
+<p>Collection of progressive samplers for general use, mainly for Hyperparameter search</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Install">Install<a class="anchor-link" href="#Install"> </a></h2>
+<h1 id="Install-using-pip">Install using pip<a class="anchor-link" href="#Install-using-pip"> </a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>pip install your_project_name</code></p>
+<p><code>pip install prosamplers</code></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Definitions">Definitions<a class="anchor-link" href="#Definitions"> </a></h2><p>Some terminology explanations</p>
+<h1 id="Frequently-Asked-Questions">Frequently Asked Questions<a class="anchor-link" href="#Frequently-Asked-Questions"> </a></h1><p>Some terminology explanations</p>
 <h3 id="What-is-a-sampler?">What is a sampler?<a class="anchor-link" href="#What-is-a-sampler?"> </a></h3><p>A sampler is a method / algorithm that generates a sequence of points in a given search space</p>
 <h3 id="What-is-progressive?">What is progressive?<a class="anchor-link" href="#What-is-progressive?"> </a></h3><p>A progressive sampler allows generating points on a point-by-point basis and does not required to say in advance how many points there need to be. They allow to ask for more points indefinetely, some only have a minimal memory footprint whereas other require complex memory mechanism</p>
 <h3 id="Why-we-need-Progressive-Samplers?">Why we need Progressive Samplers?<a class="anchor-link" href="#Why-we-need-Progressive-Samplers?"> </a></h3><p>Most use cases may be solve with a simple Grid or Random search, but when dimensionality is not huge (&lt; 100 or so dimensions) and the computation time for each point is really expensive, this alternative sampling methods could outperform naive methods as Grid or Random Search. As dimensionality increases, results tend to converge to those of Random Search</p>
@@ -67,14 +67,7 @@ nb_path: "index.ipynb"
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="How-to-use">How to use<a class="anchor-link" href="#How-to-use"> </a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Fill me in please! Don't forget code examples:</p>
-
+<h1 id="Usage">Usage<a class="anchor-link" href="#Usage"> </a></h1>
 </div>
 </div>
 </div>

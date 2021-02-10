@@ -68,6 +68,9 @@ jobs:
         python-version: ['3.7', '3.8', '3.9']
     runs-on: ${{ matrix.os }}-latest
     name: ${{ matrix.os }} - Python ${{ matrix.python-version }} - Test
+    env:
+      OS: ${{ matrix.os }}
+      PYTHON: ${{ matrix.python-version }}
 
     steps:
       - uses: actions/checkout@v2

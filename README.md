@@ -1,4 +1,4 @@
-# Title
+# Progressive Samplers
 
 
 
@@ -9,15 +9,13 @@
 [![Develop](https://img.shields.io/github/checks-status/ELC/prosamplers/develop?label=develop&style=for-the-badge)](https://github.com/ELC/prosamplers/actions?query=workflow%3A%22Build+and+Test%22)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=for-the-badge)](https://github.com/ELC/prosamplers/blob/master/LICENSE)
 
-# Progressive Samplers
-
 Collection of progressive samplers for general use, mainly for Hyperparameter search
 
-## Install
+# Install using pip
 
-`pip install your_project_name`
+`pip install prosamplers`
 
-## Definitions
+# Frequently Asked Questions
 
 Some terminology explanations
 
@@ -33,9 +31,7 @@ A progressive sampler allows generating points on a point-by-point basis and doe
 
 Most use cases may be solve with a simple Grid or Random search, but when dimensionality is not huge (< 100 or so dimensions) and the computation time for each point is really expensive, this alternative sampling methods could outperform naive methods as Grid or Random Search. As dimensionality increases, results tend to converge to those of Random Search
 
-## How to use
-
-Fill me in please! Don't forget code examples:
+# Usage
 
 ```
 1+1
