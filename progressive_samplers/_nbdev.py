@@ -16,8 +16,8 @@ index = {"grid_search": "00_core.ipynb",
 modules = ["core.py",
            "test.py"]
 
-doc_url = "https://ELC.github.io/progressive_samplers/"
+doc_url = "https://ELC.github.io/prosamplers/"
 
-git_url = "https://github.com/ELC/progressive_samplers/tree/master/"
+git_url = "https://github.com/ELC/prosamplers/tree/master/"
 
 def custom_doc_links(name): return None

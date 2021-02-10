@@ -84,7 +84,7 @@ jobs:
         run: nbdev_test_nbs
       
       - name: Run Coverage
-        run: pytest --cov-report xml:coverage.xml --cov=progressive_samplers progressive_samplers/test.py
+        run: pytest --cov-report xml:coverage.xml --cov=prosamplers prosamplers/test.py
 
 
       - name: Upload coverage to Codecov
