@@ -35,6 +35,9 @@ jobs:
         run: |
           nbdev_read_nbs
 
+      - name: Update Readme
+        run: |
+          nbdev_build_docs
 
       - name: Check if all notebooks are cleaned and in sync
         run: |
