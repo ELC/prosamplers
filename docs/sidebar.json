@@ -1,6 +1,7 @@
 {
-  "nbdev_template": {
+  "prosamplers": {
     "Overview": "/",
-    "module name here": "core.html"
+    "module name here": "core.html",
+    "Title": "test.html"
   }
 }
