@@ -28,7 +28,7 @@ def test_grid_search_default_load_test():
     from .core import grid_search
     from collections import deque
 
-    deque(grid_search(x_range=[0, 1], y_range=[0, 1], n=100_000), maxlen=0)
+    deque(grid_search(x_range=[0, 1], y_range=[0, 1], n=1000), maxlen=0)
     assert True
 
 # Comes from 00_core.ipynb, cell
@@ -52,7 +52,7 @@ def test_random_search_default_load_test():
     from .core import random_search
     from collections import deque
 
-    deque(random_search(x_range=[0, 1], y_range=[0, 1], n=100_000), maxlen=0)
+    deque(random_search(x_range=[0, 1], y_range=[0, 1], n=1000), maxlen=0)
     assert True
 
 # Comes from 00_core.ipynb, cell
@@ -76,7 +76,7 @@ def test_latin_hyper_cube_default_load_test():
     from .core import latin_hyper_cube
     from collections import deque
 
-    deque(latin_hyper_cube(x_range=[0, 1], y_range=[0, 1], n=100_000), maxlen=0)
+    deque(latin_hyper_cube(x_range=[0, 1], y_range=[0, 1], n=1000), maxlen=0)
     assert True
 
 # Comes from 00_core.ipynb, cell
@@ -100,7 +100,7 @@ def test_jittered_sampling_default_load_test():
     from .core import jittered_sampling
     from collections import deque
 
-    deque(jittered_sampling(x_range=[0, 1], y_range=[0, 1], n=100_000), maxlen=0)
+    deque(jittered_sampling(x_range=[0, 1], y_range=[0, 1], n=1000), maxlen=0)
     assert True
 
 # Comes from 00_core.ipynb, cell
@@ -124,7 +124,7 @@ def test_multi_jittered_default_load_test():
     from .core import multi_jittered
     from collections import deque
 
-    deque(multi_jittered(x_range=[0, 1], y_range=[0, 1], n=100_000), maxlen=0)
+    deque(multi_jittered(x_range=[0, 1], y_range=[0, 1], n=1000), maxlen=0)
     assert True
 
 # Comes from 00_core.ipynb, cell
@@ -148,5 +148,5 @@ def test_poisson_disk_default_load_test():
     from .core import poisson_disk
     from collections import deque
 
-    deque(poisson_disk(x_range=[0, 1], y_range=[0, 1], n=100_000), maxlen=0)
+    deque(poisson_disk(x_range=[0, 1], y_range=[0, 1], n=1000), maxlen=0)
     assert True
