@@ -132,11 +132,11 @@ def test_poisson_disk_with_seed():
     from .core import poisson_disk
     import numpy as np
     generator = poisson_disk(x_range=[0, 1], y_range=[0, 1], seed=42)
-    assert list(np.round(next(generator), 2)) == [0.38, 0.75]
-    assert list(np.round(next(generator), 2)) == [0.09, 0.81]
-    assert list(np.round(next(generator), 2)) == [0.76, 0.94]
-    assert list(np.round(next(generator), 2)) == [0.45, 0.43]
-    assert list(np.round(next(generator), 2)) == [0.19, 0.51]
+    assert list(np.round(next(generator), 2)) == [0.77, 0.65]
+    assert list(np.round(next(generator), 2)) == [0.23, 0.0]
+    assert list(np.round(next(generator), 2)) == [0.06, 0.95]
+    assert list(np.round(next(generator), 2)) == [0.91, 0.08]
+    assert list(np.round(next(generator), 2)) == [0.47, 0.43]
 
 
 def test_poisson_disk_default_n():
