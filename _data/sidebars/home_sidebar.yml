@@ -10,7 +10,7 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
-      title: Imports
+      title: module name here
       url: core.html
     - output: web,pdf
       title: Title

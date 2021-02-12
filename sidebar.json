@@ -1,7 +1,7 @@
 {
   "prosamplers": {
     "Overview": "/",
-    "Imports": "core.html",
+    "module name here": "core.html",
     "Title": "test.html"
   }
 }

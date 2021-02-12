@@ -1,13 +1,13 @@
 ---
 
-title: Imports
+title: module name here
 
 
 keywords: fastai
 sidebar: home_sidebar
 
-
-
+summary: "API details."
+description: "API details."
 nb_path: "00_core.ipynb"
 ---
 <!--
@@ -33,26 +33,6 @@ nb_path: "00_core.ipynb"
     
 <div class="cell border-box-sizing code_cell rendered">
 
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="GridSearch">GridSearch<a class="anchor-link" href="#GridSearch"> </a></h1>
-</div>
-</div>
-</div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
 <div class="output_wrapper">
 <div class="output">
 
@@ -60,8 +40,9 @@ nb_path: "00_core.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="grid_search" class="doc_header"><code>grid_search</code><a href="https://github.com/ELC/prosamplers/tree/master/prosamplers/core.py#L15" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>grid_search</code>(<strong><code>x_range</code></strong>, <strong><code>y_range</code></strong>, <strong><code>n</code></strong>=<em><code>10</code></em>)</p>
+<h4 id="say_hello" class="doc_header"><code>say_hello</code><a href="https://github.com/ELC/nbdev_template/tree/master/testnbdev/core.py#L6" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>say_hello</code>(<strong><code>to</code></strong>)</p>
 </blockquote>
+<p>Say hello to somebody</p>
 
 </div>
 
@@ -87,141 +68,28 @@ nb_path: "00_core.ipynb"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">25</span>
-<span class="n">x_range</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">y_range</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">grid_search</span><span class="p">(</span><span class="n">x_range</span><span class="p">,</span> <span class="n">y_range</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">point</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;firebrick&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">*</span><span class="n">x_range</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)),</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">*</span><span class="n">y_range</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)))</span>
-    
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">*</span><span class="n">x_range</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">*</span><span class="n">y_range</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">say_hello</span><span class="p">(</span><span class="s2">&quot;Sylvain&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
 <div class="output_wrapper">
 <div class="output">
 
 <div class="output_area">
 
 
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="test_grid_search_first_entries" class="doc_header"><code>test_grid_search_first_entries</code><a href="https://github.com/ELC/prosamplers/tree/master/prosamplers/test.py#L6" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>test_grid_search_first_entries</code>()</p>
-</blockquote>
 
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Hello Sylvain!&#39;</pre>
 </div>
 
 </div>
 
 </div>
 </div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="test_grid_search_default_n" class="doc_header"><code>test_grid_search_default_n</code><a href="https://github.com/ELC/prosamplers/tree/master/prosamplers/test.py#L16" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>test_grid_search_default_n</code>()</p>
-</blockquote>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="test_grid_search_default_load_test" class="doc_header"><code>test_grid_search_default_load_test</code><a href="https://github.com/ELC/prosamplers/tree/master/prosamplers/test.py#L21" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>test_grid_search_default_load_test</code>()</p>
-</blockquote>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Random-Search">Random Search<a class="anchor-link" href="#Random-Search"> </a></h1>
-</div>
-</div>
-</div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="random_search" class="doc_header"><code>random_search</code><a href="https://github.com/ELC/prosamplers/tree/master/prosamplers/core.py#L38" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>random_search</code>(<strong><code>x_range</code></strong>, <strong><code>y_range</code></strong>, <strong><code>n</code></strong>=<em><code>10</code></em>, <strong><code>seed</code></strong>=<em><code>42</code></em>)</p>
-</blockquote>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
 
 </div>
     {% endraw %}
@@ -233,17 +101,7 @@ nb_path: "00_core.ipynb"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">25</span>
-<span class="n">x_range</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">y_range</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">random_search</span><span class="p">(</span><span class="n">x_range</span><span class="p">,</span> <span class="n">y_range</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">point</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;firebrick&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">*</span><span class="n">x_range</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">*</span><span class="n">y_range</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="n">say_hello</span><span class="p">(</span><span class="s2">&quot;Jeremy&quot;</span><span class="p">)</span><span class="o">==</span><span class="s2">&quot;Hello Jeremy!&quot;</span>
 </pre></div>
 
     </div>
@@ -253,39 +111,50 @@ nb_path: "00_core.ipynb"
 </div>
     {% endraw %}
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Latin-HyperCube">Latin HyperCube<a class="anchor-link" href="#Latin-HyperCube"> </a></h1>
-</div>
-</div>
-</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">nbdev.export2html</span> <span class="kn">import</span> <span class="n">nbdev_build_lib</span><span class="p">,</span> <span class="n">nbdev_build_docs</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nbdev_build_docs</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
 
 <div class="output_area">
 
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="latin_hyper_cube" class="doc_header"><code>latin_hyper_cube</code><a href="https://github.com/ELC/prosamplers/tree/master/prosamplers/core.py#L54" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>latin_hyper_cube</code>(<strong><code>x_range</code></strong>, <strong><code>y_range</code></strong>, <strong><code>n</code></strong>=<em><code>10</code></em>, <strong><code>seed</code></strong>=<em><code>42</code></em>)</p>
-</blockquote>
-
-</div>
-
-</div>
-
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>converting D:\repositories\nbdev_template\index.ipynb to README.md
+</pre>
 </div>
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
+</div>
 
 </div>
     {% endraw %}
@@ -297,79 +166,27 @@ nb_path: "00_core.ipynb"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">8</span>
-<span class="n">x_range</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">y_range</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">latin_hyper_cube</span><span class="p">(</span><span class="n">x_range</span><span class="p">,</span> <span class="n">y_range</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">point</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;firebrick&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">*</span><span class="n">x_range</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">*</span><span class="n">y_range</span><span class="p">)</span>
-
-<span class="n">divisions</span> <span class="o">=</span> <span class="mi">2</span><span class="o">**</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">*</span><span class="n">x_range</span><span class="p">,</span> <span class="n">divisions</span><span class="p">):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">*</span><span class="n">y_range</span><span class="p">,</span> <span class="n">divisions</span><span class="p">):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">*</span><span class="n">x_range</span><span class="p">,</span> <span class="n">divisions</span><span class="p">),</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">*</span><span class="n">y_range</span><span class="p">,</span> <span class="n">divisions</span><span class="p">))</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nbdev_build_lib</span><span class="p">()</span>
 </pre></div>
 
     </div>
 </div>
 </div>
-
-</div>
-    {% endraw %}
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Orthogonal-sampling">Orthogonal sampling<a class="anchor-link" href="#Orthogonal-sampling"> </a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Stratified-sampling-(Jittered-Sampling)">Stratified sampling (Jittered Sampling)<a class="anchor-link" href="#Stratified-sampling-(Jittered-Sampling)"> </a></h1><p><a href="https://www.scratchapixel.com/lessons/mathematics-physics-for-computer-graphics/monte-carlo-methods-in-practice/introduction-quasi-monte-carlo">https://www.scratchapixel.com/lessons/mathematics-physics-for-computer-graphics/monte-carlo-methods-in-practice/introduction-quasi-monte-carlo</a></p>
-
-</div>
-</div>
-</div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
 <div class="output">
 
 <div class="output_area">
 
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="jittered_sampling" class="doc_header"><code>jittered_sampling</code><a href="https://github.com/ELC/prosamplers/tree/master/prosamplers/core.py#L122" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>jittered_sampling</code>(<strong><code>x_range</code></strong>, <strong><code>y_range</code></strong>, <strong><code>n</code></strong>=<em><code>10</code></em>, <strong><code>seed</code></strong>=<em><code>42</code></em>)</p>
-</blockquote>
-
-</div>
-
-</div>
-
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Converted 00_core.ipynb.
+Converted index.ipynb.
+</pre>
 </div>
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
+</div>
 
 </div>
     {% endraw %}
@@ -381,82 +198,7 @@ nb_path: "00_core.ipynb"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">16</span>
-<span class="n">x_range</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">y_range</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">jittered_sampling</span><span class="p">(</span><span class="n">x_range</span><span class="p">,</span> <span class="n">y_range</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">point</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;firebrick&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">*</span><span class="n">x_range</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">*</span><span class="n">y_range</span><span class="p">)</span>
-
-<span class="n">divisions</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">*</span><span class="n">x_range</span><span class="p">,</span> <span class="n">divisions</span><span class="p">):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">*</span><span class="n">y_range</span><span class="p">,</span> <span class="n">divisions</span><span class="p">):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">*</span><span class="n">x_range</span><span class="p">,</span> <span class="n">divisions</span><span class="p">),</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">*</span><span class="n">y_range</span><span class="p">,</span> <span class="n">divisions</span><span class="p">))</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Multi-Jittered-sampling">Multi-Jittered sampling<a class="anchor-link" href="#Multi-Jittered-sampling"> </a></h1>
-</div>
-</div>
-</div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">resolution_x</span><span class="p">,</span> <span class="n">resolution_y</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="n">cells</span> <span class="o">=</span> <span class="n">resolution_x</span> <span class="o">*</span> <span class="n">resolution_y</span>
-
-<span class="n">xs_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">resolution_x</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">ys_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">resolution_y</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-<span class="n">xs</span><span class="p">,</span> <span class="n">ys</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">xs_</span><span class="p">,</span> <span class="n">ys_</span><span class="p">)</span>
-
-<span class="n">xs</span> <span class="o">=</span> <span class="p">(</span><span class="n">xs</span><span class="o">.</span><span class="n">T</span> <span class="o">+</span> <span class="n">ys_</span> <span class="o">/</span> <span class="n">resolution_x</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
-<span class="n">ys</span> <span class="o">=</span> <span class="n">ys</span> <span class="o">+</span> <span class="n">xs_</span> <span class="o">/</span> <span class="n">resolution_y</span>
-
-<span class="n">xs</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="o">*</span><span class="n">xs</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">/</span> <span class="n">cells</span>
-<span class="n">ys</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="o">*</span><span class="n">ys</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">/</span> <span class="n">cells</span>
-
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">xs</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">ys</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xs_</span><span class="p">:</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">ys_</span><span class="p">:</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
-    
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">resolution_x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">resolution_y</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">nbdev.cli</span> <span class="kn">import</span> <span class="n">nbdev_install_git_hooks</span>
 </pre></div>
 
     </div>
@@ -469,102 +211,27 @@ nb_path: "00_core.ipynb"
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nbdev_install_git_hooks</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
 
 <div class="output_area">
 
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="multi_jittered" class="doc_header"><code>multi_jittered</code><a href="https://github.com/ELC/prosamplers/tree/master/prosamplers/core.py#L173" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>multi_jittered</code>(<strong><code>x_range</code></strong>, <strong><code>y_range</code></strong>, <strong><code>n</code></strong>=<em><code>10</code></em>, <strong><code>seed</code></strong>=<em><code>42</code></em>)</p>
-</blockquote>
-
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Executing: git config --local include.path ../.gitconfig
+Success: hooks are installed and repo&#39;s .gitconfig is now trusted
+</pre>
 </div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">15</span>
-<span class="n">x_range</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">y_range</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">multi_jittered</span><span class="p">(</span><span class="n">x_range</span><span class="p">,</span> <span class="n">y_range</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">point</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;firebrick&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
-
-    
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">*</span><span class="n">x_range</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">*</span><span class="n">y_range</span><span class="p">)</span>
-
-<span class="n">divisions</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span> <span class="o">**</span> <span class="mf">0.5</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">*</span><span class="n">x_range</span><span class="p">,</span> <span class="n">divisions</span><span class="p">):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">*</span><span class="n">y_range</span><span class="p">,</span> <span class="n">divisions</span><span class="p">):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">*</span><span class="n">x_range</span><span class="p">,</span> <span class="n">divisions</span><span class="o">**</span><span class="mi">2</span><span class="p">),</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">*</span><span class="n">y_range</span><span class="p">,</span> <span class="n">divisions</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
-
-<span class="c1"># plt.grid()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Poisson-Disk-Sampling-(Blue-Noise-Sampling)">Poisson-Disk Sampling (Blue-Noise Sampling)<a class="anchor-link" href="#Poisson-Disk-Sampling-(Blue-Noise-Sampling)"> </a></h1><ul>
-<li><a href="https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf">https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf</a></li>
-<li><a href="https://www.youtube.com/watch?v=7WcmyxyFO7o">https://www.youtube.com/watch?v=7WcmyxyFO7o</a></li>
-</ul>
-<p>Possible improvement using from scipy.spatial.distance import pdist, squareform</p>
-
-</div>
-</div>
-</div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="is_valid" class="doc_header"><code>is_valid</code><a href="https://github.com/ELC/prosamplers/tree/master/prosamplers/core.py#L214" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>is_valid</code>(<strong><code>x</code></strong>, <strong><code>y</code></strong>, <strong><code>points</code></strong>, <strong><code>radius</code></strong>)</p>
-</blockquote>
-
-</div>
-
 </div>
 
 </div>
@@ -573,264 +240,6 @@ nb_path: "00_core.ipynb"
 </div>
     {% endraw %}
 
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="poisson_disk" class="doc_header"><code>poisson_disk</code><a href="https://github.com/ELC/prosamplers/tree/master/prosamplers/core.py#L225" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>poisson_disk</code>(<strong><code>x_range</code></strong>, <strong><code>y_range</code></strong>, <strong><code>n</code></strong>=<em><code>10</code></em>, <strong><code>seed</code></strong>=<em><code>42</code></em>, <strong><code>tries</code></strong>=<em><code>1000.0</code></em>)</p>
-</blockquote>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">24</span>
-<span class="n">x_range</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">y_range</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-
-<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
-
-<span class="o">*</span><span class="n">points</span><span class="p">,</span> <span class="n">radius</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">poisson_disk</span><span class="p">(</span><span class="n">x_range</span><span class="p">,</span> <span class="n">y_range</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
-
-<span class="k">for</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">points</span><span class="p">:</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">point</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;firebrick&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
-    <span class="n">circle</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Circle</span><span class="p">(</span><span class="n">point</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;steelblue&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">circle</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">*</span><span class="n">x_range</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">*</span><span class="n">y_range</span><span class="p">)</span>
-
-<span class="n">divisions</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x_range</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">radius</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">*</span><span class="n">x_range</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">divisions</span><span class="p">)),</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">*</span><span class="n">y_range</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">divisions</span><span class="p">)))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="CCVT-Sampling">CCVT Sampling<a class="anchor-link" href="#CCVT-Sampling"> </a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Quasi-Monte-Carlo---Low-Discrepancy-Sequences">Quasi Monte Carlo - Low Discrepancy Sequences<a class="anchor-link" href="#Quasi-Monte-Carlo---Low-Discrepancy-Sequences"> </a></h1><ul>
-<li>Van der Corput Sequence</li>
-<li>Sobol Sequence</li>
-<li>Halton Sequence</li>
-<li>Hammersley </li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Tree-structured-Parzen-estimator-(TPE)">Tree-structured Parzen estimator (TPE)<a class="anchor-link" href="#Tree-structured-Parzen-estimator-(TPE)"> </a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Covariance-matrix-adaptation-evolution-strategy-(CMA-ES)">Covariance matrix adaptation evolution strategy (CMA-ES)<a class="anchor-link" href="#Covariance-matrix-adaptation-evolution-strategy-(CMA-ES)"> </a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Presentation">Presentation<a class="anchor-link" href="#Presentation"> </a></h1>
-</div>
-</div>
-</div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># x_range = (0, 1)</span>
-<span class="c1"># y_range = (0, 1)</span>
-
-<span class="c1"># methods = 10</span>
-<span class="c1"># base_width = 5 * methods // 2</span>
-<span class="c1"># fig, axes = plt.subplots(2, methods//2, figsize=(base_width, base_width/2))</span>
-<span class="c1"># axes = np.ndarray.flatten(axes)</span>
-
-
-<span class="c1"># ax = axes[0]</span>
-
-<span class="c1"># for point in grid_search(x_range, y_range, n):</span>
-<span class="c1">#     ax.scatter(*point, color=&quot;firebrick&quot;, marker=&quot;x&quot;)</span>
-
-<span class="c1"># ax.set_xticks(np.linspace(*x_range, int(n**0.5)))</span>
-<span class="c1"># ax.set_yticks(np.linspace(*y_range, int(n**0.5)))</span>
-    
-<span class="c1"># ax.set_xlim(*x_range)</span>
-<span class="c1"># ax.set_ylim(*y_range)</span>
-<span class="c1"># ax.set_title(&quot;Grid Search&quot;)</span>
-
-
-
-<span class="c1"># ax = axes[1]</span>
-
-<span class="c1"># for point in random_search(x_range, y_range, n):</span>
-<span class="c1">#     ax.scatter(*point, color=&quot;firebrick&quot;, marker=&quot;x&quot;)</span>
-
-<span class="c1"># ax.set_xlim(*x_range)</span>
-<span class="c1"># ax.set_ylim(*y_range)</span>
-<span class="c1"># ax.set_title(&quot;Random Search&quot;)</span>
-
-
-<span class="c1"># ax = axes[2]</span>
-
-<span class="c1"># for point in latin_hyper_cube(x_range, y_range, n):</span>
-<span class="c1">#     ax.scatter(*point, color=&quot;firebrick&quot;, marker=&quot;x&quot;, s=15)</span>
-
-<span class="c1"># ax.set_xlim(*x_range)</span>
-<span class="c1"># ax.set_ylim(*y_range)</span>
-
-<span class="c1"># divisions = 2**(n-1).bit_length() + 1</span>
-
-<span class="c1"># for i in np.linspace(*x_range, divisions):</span>
-<span class="c1">#     ax.axvline(i, alpha=0.6, ls=&quot;--&quot;, lw=1)</span>
-
-<span class="c1"># for i in np.linspace(*y_range, divisions):</span>
-<span class="c1">#     ax.axhline(i, alpha=0.6, ls=&quot;--&quot;, lw=1)</span>
-
-<span class="c1"># # ax.set_xticks(np.linspace(*x_range, divisions))</span>
-<span class="c1"># # ax.set_yticks(np.linspace(*y_range, divisions))</span>
-
-<span class="c1"># ax.grid()</span>
-<span class="c1"># ax.set_title(&quot;Latin Hypercube Sampling (N-Rooks)&quot;)</span>
-
-
-<span class="c1"># ax = axes[3]</span>
-
-
-<span class="c1"># ax.set_title(&quot;Orthogonal Sampling&quot;)</span>
-
-
-<span class="c1"># ax = axes[4]</span>
-<span class="c1"># for point in jittered_sampling(x_range, y_range, n):</span>
-<span class="c1">#     ax.scatter(*point, color=&quot;firebrick&quot;, marker=&quot;x&quot;)</span>
-
-
-
-<span class="c1"># divisions = int(2**np.ceil(np.log(n) / np.log(4)) + 1)</span>
-
-<span class="c1"># for i in np.linspace(*x_range, divisions):</span>
-<span class="c1">#     ax.axvline(i, alpha=0.6, ls=&quot;--&quot;, lw=1)</span>
-
-<span class="c1"># for i in np.linspace(*y_range, divisions):</span>
-<span class="c1">#     ax.axhline(i, alpha=0.6, ls=&quot;--&quot;, lw=1)</span>
-
-<span class="c1"># ax.set_xlim(*x_range)</span>
-<span class="c1"># ax.set_ylim(*y_range)</span>
-
-<span class="c1"># ax.grid()</span>
-
-<span class="c1"># ax.set_title(&quot;Stratified sampling (Jittered Sampling)&quot;)</span>
-
-
-
-<span class="c1"># ax = axes[5]</span>
-
-<span class="c1"># ax.set_title(&quot;Multi-Jittered&quot;)</span>
-
-
-<span class="c1"># ax = axes[6]</span>
-
-<span class="c1"># *points, radius = list(poisson_disk(x_range, y_range, n))</span>
-
-<span class="c1"># for point in points:</span>
-<span class="c1">#     ax.scatter(*point, color=&quot;firebrick&quot;, marker=&quot;x&quot;)</span>
-<span class="c1">#     circle = plt.Circle(point, radius, color=&quot;steelblue&quot;, alpha=0.1)</span>
-<span class="c1">#     ax.add_artist(circle)</span>
-
-<span class="c1"># ax.set_xlim(*x_range)</span>
-<span class="c1"># ax.set_ylim(*y_range)</span>
-
-<span class="c1"># divisions = int(sum(x_range) / (radius / 2 ** 0.5) + 1)</span>
-
-<span class="c1"># ax.set_xticks(np.linspace(*x_range, divisions))</span>
-<span class="c1"># ax.set_yticks(np.linspace(*y_range, divisions))</span>
-
-<span class="c1"># ax.set_title(&quot;Poisson Disk Sampling (Blue Noise)&quot;)</span>
-
-
-<span class="c1"># ax = axes[7]</span>
-
-<span class="c1"># ax.set_title(&quot;Quasi Monte-Carlo&quot;)</span>
-
-
-<span class="c1"># plt.suptitle(f&quot;Progressive Sampling Methods - N={n}&quot;, fontsize=18)</span>
-<span class="c1"># plt.tight_layout()</span>
-<span class="c1"># plt.subplots_adjust(top=0.9)</span>
-<span class="c1"># plt.savefig(&quot;sampling_methods.png&quot;)</span>
-<span class="c1"># plt.show()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="References">References<a class="anchor-link" href="#References"> </a></h1><ul>
-<li><a href="https://cs.dartmouth.edu/~wjarosz/publications/subr16fourier-slides-2-patterns.pdf">https://cs.dartmouth.edu/~wjarosz/publications/subr16fourier-slides-2-patterns.pdf</a></li>
-<li><a href="http://web.cs.wpi.edu/~emmanuel/courses/cs563/S10/talks/wk3_p1_wadii_sampling_techniques.pdf">http://web.cs.wpi.edu/~emmanuel/courses/cs563/S10/talks/wk3_p1_wadii_sampling_techniques.pdf</a></li>
-<li><a href="https://www.scratchapixel.com/lessons/mathematics-physics-for-computer-graphics/monte-carlo-methods-in-practice/introduction-quasi-monte-carlo">https://www.scratchapixel.com/lessons/mathematics-physics-for-computer-graphics/monte-carlo-methods-in-practice/introduction-quasi-monte-carlo</a></li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Export">Export<a class="anchor-link" href="#Export"> </a></h1>
-</div>
-</div>
-</div>
 </div>
  
 
