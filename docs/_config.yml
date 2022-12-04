@@ -7,7 +7,7 @@ description: This is a test for the nbdev library
 # Set to false to disable KaTeX math
 use_math: true
 # Add Google analytics id if you have one and want to use it here
-google_analytics: UA-71773079-3
+google_analytics: G-Y3GBPLEV2K
 # See http://nbdev.fast.ai/search for help with adding Search
 google_search:
 
